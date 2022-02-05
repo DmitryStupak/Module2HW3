@@ -7,6 +7,17 @@ namespace Module2HW3
         private Vegetable[] _salad = new Vegetable[1];
         private static int countIngr = 0;
 
+        public void MakeSalad()
+        {
+            AddIngredients((Vegetable)new RedCarrot(110));
+            AddIngredients((Vegetable)new Cucumber(200));
+            AddIngredients((Vegetable)new Potato(500));
+            AddIngredients((Vegetable)new ExtraVirginOil(50));
+            AddIngredients((Vegetable)new CherryTomato(130));
+            AddIngredients((Vegetable)new Onion(30));
+            AddIngredients((Vegetable)new GreenTomato(140));
+        }
+
         public Vegetable[] GetSalad()
         {
             return _salad;

@@ -38,5 +38,10 @@
             get => _weight;
             set => _weight = (value < 0) ? 0 : value;
         }
+
+        public override string ToString()
+        {
+            return $"{Name}   {Calories}kcal   {Weight}g";
+        }
     }
 }
