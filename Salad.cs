@@ -5,7 +5,7 @@ namespace Module2HW3
     public class Salad
     {
         private Vegetable[] _salad = new Vegetable[1];
-        private static int countIngr = 0;
+        private int _countIngr = 0;
 
         public void MakeSalad()
         {
@@ -25,13 +25,13 @@ namespace Module2HW3
 
         public void AddIngredients(Vegetable vegetable)
         {
-            if (countIngr + 1 >= _salad.Length)
+            if (_countIngr + 1 >= _salad.Length)
             {
-                Array.Resize(ref _salad, countIngr + 1);
+                Array.Resize(ref _salad, _countIngr + 1);
             }
 
-            _salad[countIngr] = vegetable;
-            countIngr++;
+            _salad[_countIngr] = vegetable;
+            _countIngr++;
         }
 
         public double GetCalories()
