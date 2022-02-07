@@ -29,6 +29,12 @@ namespace Module2HW3
             {
                 Console.WriteLine(item);
             }
+
+            Console.WriteLine("Polymorphism :");
+            CucurbVeg cucurbVeg = new CucurbVeg("TestVeg", 100);
+            cucurbVeg.Print();
+            Cucumber cucumber = new Cucumber();
+            cucumber.Print();
         }
     }
 }

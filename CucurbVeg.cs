@@ -1,6 +1,8 @@
-﻿namespace Module2HW3
+﻿using System;
+
+namespace Module2HW3
 {
-    public abstract class CucurbVeg : Vegetable
+    public class CucurbVeg : Vegetable
     {
         public CucurbVeg(string name, double calories, double weight)
             : base(name, calories, weight)
@@ -12,6 +14,11 @@
             : base(name, calories)
         {
             Category = "Cucurbitaceae Vegetable";
+        }
+
+        public virtual void Print()
+        {
+            Console.WriteLine($" I am Cucurbitaceae Vegetable from class {typeof(CucurbVeg).ToString()}");
         }
     }
 }
